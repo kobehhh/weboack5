@@ -3,9 +3,9 @@ import svg from './imgs/arrow.svg'
 import exampleText from './example.text'
 import './style.css'
 import './style.less'
-import css from './style.css'
+// import css from './style.css'
 
-console.log('css-loader打包后的结果', css) // 去掉style-lodaer 只使用css-loader去打包css可以查看到
+// console.log('css-loader打包后的结果', css) // 去掉style-lodaer 只使用css-loader去打包css可以查看到
 
 const img = document.createElement('img')
 img.src = pic
