@@ -1,3 +1,6 @@
 .hello {
   color: black;
 }
+.block-bg {
+  background-image: url('./imgs/bg.png') !important;
+}
