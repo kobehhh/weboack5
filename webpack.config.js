@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const cssMinimizerWebpackPlugin= require('css-minimizer-webpack-plugin')
+const cssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -74,7 +74,7 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
           filename: "files/[contenthash][ext][query]",
         },
@@ -82,16 +82,24 @@ module.exports = {
       {
         // 转换成js对象
         test: /\.(csv|tsv)$/,
-        use: 'csv-loader'
+        use: "csv-loader",
       },
       {
         // 转换成数组
         test: /\.(xml)$/,
-        use: 'xml-loader'
-      }
+        use: "xml-loader",
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: { presets: ["@babel/preset-env"] },
+        },
+      },
     ],
   },
   optimization: {
-    minimizer: [new cssMinimizerWebpackPlugin()]
-  }
+    minimizer: [new cssMinimizerWebpackPlugin()],
+  },
 };
