@@ -1,0 +1,116 @@
+<?xml version="1.0"encoding="UTF-8"?>
+<data>
+    <interface_version>1.0</interface_version>
+    <partner>xinhuanet</partner>
+    <lastmod>2015-07-02</lastmod>
+    <frequent>5</frequent>
+    <resources>
+        
+        <!--文章资源示例-->
+        <resource>
+            <resource_id>10001</resource_id>
+            <resource_type>article</resource_type>
+            <action>add</action>
+            <title><![CDATA[标题]]]></title>
+            <author><![CDATA[作者]]]></author>
+            <source>新华网</source>
+            <keyword><![CDATA[北京，雾霾]]]></keyword>
+            <category>新闻</category>
+            <release_date>2015-07-26 15:24:50</release_date>
+            <description><![CDATA[摘要]]]></description>
+            <guide_image><![CDATA[http://x.cn/a.jpg]]]></guide_image>
+            <original_url><![CDATA[http://x.cn/xxx.shtml]]]></original_url>
+            <content><![CDATA[正文]]]></content>
+            <extends>
+                <info name="info_name1">value1</info>
+                <info name="info_name2">value2</info>
+            </extends>
+        </resource>
+
+        <!--视频资源示例-->
+        <resource>
+            <resource_id>10002</resource_id>
+            <resource_type>video</resource_type>
+            <action>add</action>
+            <title><![CDATA[标题]]]></title>
+            <format>flv</format>
+            <author><![CDATA[作者]]]></author>
+            <source>新华网</source>
+            <keyword><![CDATA[北京，雾霾]]]></keyword>
+            <category>新闻</category>
+            <release_date>2015-07-26 15:24:50</release_date>
+            <description><![CDATA[摘要]]]></description>
+            <guide_image><![CDATA[http://x.cn/a.jpg]]]></guide_image>
+            <original_url><![CDATA[http://x.cn/xxx.shtml]]]></original_url>
+            <video_file><![CDATA[http://x.cn/123.flv]]]></video_file>
+            <duration>00:00</duration>
+            <extends>
+                <info name="info_name1">value1</info>
+                <info name="info_name2">value2</info>
+            </extends>
+        </resource>
+
+        <!--图集资源示例-->
+        <resource>
+            <resource_id>10003</resource_id>
+            <resource_type>album</resource_type>
+            <action>add</action> 
+            <title><![CDATA[标题]]]></title>
+            <author><![CDATA[作者]]]></author>
+            <source>新华网</source>
+            <keyword><![CDATA[北京，雾霾]]]></keyword>
+            <category>新闻</category>
+            <release_date>2015-07-26 15:24:50</release_date>
+            <description><![CDATA[摘要]]]></description>
+            <guide_image><![CDATA[http://x.cn/a.jpg]]]></guide_image>
+            <original_url><![CDATA[http://x.cn/xxx.shtml]]]></original_url>
+            <image_file><![CDATA[http://x.cn/123.jpg,http://x.cn/123.jpg]]]></image_file>
+            <extends>
+                <info name="info_name1">value1</info>
+                <info name="info_name2">value2</info>
+            </extends>
+        </resource>
+
+        <!--活动资源示例-->
+        <resource>
+            <resource_id>10004</resource_id>
+            <resource_type>activity</resource_type>
+            <action>add</action>
+            <title><![CDATA[标题]]]></title>
+            <organization><![CDATA[活动举办单位]]]></organization>
+            <act_time>2015-07-02</act_time>
+            <address>北京市海淀区xxxx</address>
+            <keyword><![CDATA[北京，雾霾]]]></keyword>
+            <act_type>线上活动</act_type>
+            <description><![CDATA[摘要]]]></description>
+            <guide_image><![CDATA[http://x.cn/a.jpg]]]></guide_image>
+            <original_url><![CDATA[http://x.cn/a.shtml]]]></original_url>
+            <act_file><![CDATA[http://a.cn/a.jpg,http://x.cn/a.jpg]]]></act_file>
+            <extends>
+                <info name="info_name1">value1</info>
+                <info name="info_name2">value2</info>
+            </extends>
+        </resource>
+
+        <!--应用资源示例-->
+        <resource>
+            <resource_id>10005</resource_id>
+            <resource_type>app</resource_type>
+            <action>add</action>
+            <app_name><![CDATA[应用名称]]]></app_name>
+            <app_version>1.0</app_version>
+            <developer><![CDATA[开发者或开发单位]]]></developer>
+            <originality>true|false</originality>
+            <description><![CDATA[摘要]]]></description>
+            <keyword><![CDATA[北京，雾霾]]]></keyword>
+            <platform>Android|iOS|HTML5|FLASH</platform>
+            <app_icon><![CDATA[http://x.cn/a.jpg]]]></app_icon>
+            <app_images><![CDATA[http://x.cn/a.jpg,http://x.cn/a.jpg]]]></app_images>
+            <package_link><![CDATA[http://x.cn/xxx.apk]]]></package_link>
+            <extends>
+                <info name="info_name1">value1</info>
+                <info name="info_name2">value2</info>
+            </extends>
+        </resource>
+    </resources>
+</data>

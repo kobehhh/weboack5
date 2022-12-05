@@ -78,6 +78,16 @@ module.exports = {
         generator: {
           filename: "files/[contenthash][ext][query]",
         },
+      },
+      {
+        // 转换成js对象
+        test: /\.(csv|tsv)$/,
+        use: 'csv-loader'
+      },
+      {
+        // 转换成数组
+        test: /\.(xml)$/,
+        use: 'xml-loader'
       }
     ],
   },
