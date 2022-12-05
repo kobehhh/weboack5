@@ -72,6 +72,13 @@ module.exports = {
         // use: ['style-loader', 'css-loader', 'less-loader']
         use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"],
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: "files/[contenthash][ext][query]",
+        },
+      }
     ],
   },
   optimization: {

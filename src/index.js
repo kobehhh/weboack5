@@ -23,3 +23,8 @@ document.body.appendChild(text)
 
 document.body.classList.add('hello')
 document.body.classList.add('bg')
+
+const span = document.createElement('span')
+span.classList.add('icon')
+span.innerHTML = '&#xe62b;'
+document.body.appendChild(span)
