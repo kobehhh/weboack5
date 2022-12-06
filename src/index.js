@@ -40,3 +40,13 @@ console.log("notes", Notes);
 helloWorld();
 
 // console.log(_.join([1, 2, 3], ' '))
+
+const button = document.createElement('button')
+button.textContent = '点击'
+button.addEventListener('click', () => {
+  import(/* webpackChunkName: 'math' */'./math.js').then(({ add }) => {
+    console.log(add(4, 5))
+  })
+})
+
+document.body.appendChild(button)

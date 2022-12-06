@@ -4,15 +4,15 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const cssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  // entry: "./src/index.js",
   /**
    * 代码分离 1、使用多入口
    * 缺点：分割的各个包通用的代码会打包多次
    */
-  // entry: {
-  //   index: "./src/index.js",
-  //   another: "./src/another-module.js",
-  // },
+  entry: {
+    index: "./src/index.js",
+    another: "./src/another-module.js",
+  },
   /**
    * 代码分离 1、使用多入口 优化
    */
