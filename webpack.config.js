@@ -5,11 +5,28 @@ const cssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   // entry: "./src/index.js",
-  // 多入口
+  /**
+   * 代码分离 1、使用多入口
+   * 缺点：分割的各个包通用的代码会打包多次
+   */
   entry: {
     index: "./src/index.js",
     another: "./src/another-module.js",
   },
+  /**
+   * 代码分离 1、使用多入口 优化
+   */
+  // entry: {
+  //   index: {
+  //     import: './src/index.js',
+  //     dependOn: 'shared'
+  //   },
+  //   another: {
+  //     import: './src/another-module.js',
+  //     dependOn: 'shared'
+  //   },
+  //   shared: 'lodash' // 抽离lodash打包成名为shared的淡出chunk
+  // },
   output: {
     // filename: "bundle.js",
     filename: '[name].bundle.js', // 针对多入口时命名不同的打包文件
@@ -106,6 +123,12 @@ module.exports = {
     ],
   },
   optimization: {
-    minimizer: [new cssMinimizerWebpackPlugin()],
+    minimizer: [new cssMinimizerWebpackPlugin()], // css压缩
+    /**
+     * 代码分离 2、splitChunks(entry配置多入口后配置以下代码即可)
+     */
+    splitChunks: {
+      chunks: 'all'
+    }
   },
 };
