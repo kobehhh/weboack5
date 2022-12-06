@@ -44,7 +44,12 @@ helloWorld();
 const button = document.createElement('button')
 button.textContent = '点击'
 button.addEventListener('click', () => {
-  import(/* webpackChunkName: 'math' */'./math.js').then(({ add }) => {
+  /**
+   * webpackChunkName: 单独打包出的文件名
+   * webpackPrefetch: 预先拉取，当首页应用都加载完毕 网络空闲的时候再去加载
+   * webpackPreload: 预先加载.为预加载的文件取别名，在父 chunk 加载时并行下载文件
+   */
+  import(/* webpackChunkName: 'math', webpackPreload: true */'./math.js').then(({ add }) => {
     console.log(add(4, 5))
   })
 })
