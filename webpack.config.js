@@ -29,7 +29,7 @@ module.exports = {
   // },
   output: {
     // filename: "bundle.js",
-    filename: '[name].bundle.js', // 针对多入口时命名不同的打包文件
+    filename: '[name].[contenthash].js', // 针对多入口时命名不同的打包文件
     path: path.resolve(__dirname, "./dist"),
     clean: true, // 在生成文件之前清空 output 目录
     assetModuleFilename: "images/[contenthash][ext][query]", // 全局指定资源文件输出位置及名字
@@ -127,8 +127,21 @@ module.exports = {
     /**
      * 代码分离 2、splitChunks(entry配置多入口后配置以下代码即可)
      */
+    // splitChunks: {
+    //   chunks: 'all'
+    // }
+
+    /**
+     * 缓存第三方库
+     */
     splitChunks: {
-      chunks: 'all'
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
     }
   },
 };
