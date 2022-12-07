@@ -29,10 +29,11 @@ module.exports = {
   // },
   output: {
     // filename: "bundle.js",
-    filename: '[name].[contenthash].js', // 针对多入口时命名不同的打包文件
+    filename: 'scripts/[name].[contenthash].js', // 针对多入口时命名不同的打包文件
     path: path.resolve(__dirname, "./dist"),
     clean: true, // 在生成文件之前清空 output 目录
     assetModuleFilename: "images/[contenthash][ext][query]", // 全局指定资源文件输出位置及名字
+    publicPath: 'http://localhost:8080/', // 公共路径
   },
   mode: "development", // production development
   devtool: "inline-source-map",
