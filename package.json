@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --watch --env development",
-    "build": "webpack --env production",
-    "start": "webpack-dev-server"
+    "build": "webpack -c ./config/webpack.config.prod.js",
+    "build:dev": "webpack --watch -c ./config/webpack.config.dev.js",
+    "start": "webpack-dev-server -c ./config/webpack.config.dev.js"
   },
   "keywords": [],
   "author": "",
