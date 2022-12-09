@@ -5,7 +5,6 @@ const prod = require("./webpack.config.prod");
 const dev = require("./webpack.config.dev");
 
 module.exports = (env) => {
-  console.log('11111111111', env)
   switch (true) {
     case env.development:
       return merge(base, dev);
