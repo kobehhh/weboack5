@@ -9,6 +9,7 @@ import helloWorld from "./helloWord";
 // import css from './style.css'
 // import _ from 'lodash'
 import './async-module'
+import './server'
 
 // console.log('css-loader打包后的结果', css) // 去掉style-lodaer 只使用css-loader去打包css可以查看到
 

@@ -15,5 +15,29 @@ module.exports = {
   devtool: "source-map",
   devServer: {
     static: "./dist",
+    hot: true, // 启用模块热替换
+    host: "localhost", // 设置host
+    port: 8080, // 设置端口号
+    // open: true, // 自动打开浏览器
+    compress: true, // 将静态资源进行gzip压缩
+    headers: { // 为所有响应response添加 headers信息
+      'X-Access-Token': 'wlf'
+    },
+    // headers: [
+    //   {
+    //     key: 'X-Custom',
+    //     value: 'foo',
+    //   },
+    //   {
+    //     key: 'Y-Custom',
+    //     value: 'bar',
+    //   },
+    // ],
+    proxy: { // 开启代理
+      '/api': 'http://localhost:9000'
+    },
+    host: '0.0.0.0', // 让你服务器可以被外部访问
+    // https: true, // 将本地http服务变成https服务
+    // historyApiFallback: true, // 提供页面来代替任何404响应
   },
 };
