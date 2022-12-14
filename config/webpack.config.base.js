@@ -1,8 +1,9 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const cssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
-const TerserWebpackPlugin = require("terser-webpack-plugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
+// const cssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
+// const TerserWebpackPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   // entry: "./src/index.js",
@@ -40,9 +41,11 @@ module.exports = {
       inject: "body", // 在指定位置去生成script标签
     }),
     new MiniCssExtractPlugin({ filename: "styles/[contenthash].css" }),
+    new ESLintPlugin(), // eslint结合weapack
   ],
   devServer: {
     static: "./dist",
+    overlay: true, // 当出现编译错误或警告时，是否在浏览器中显示全屏覆盖
   },
   module: {
     rules: [

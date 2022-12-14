@@ -15,13 +15,14 @@ module.exports = {
   devtool: "source-map",
   devServer: {
     static: "./dist",
-    hot: true, // 启用模块热替换
-    host: "localhost", // 设置host
+    hot: true, // 启用模块热替换HMR（在应用程序运行过程中替换、添加或删除模块，而无需重新加载整个页面）,默认开启
+    liveReload: true, // 启用模块热加载（文件更新时自动刷新服务和页面）,默认开启
     port: 8080, // 设置端口号
     // open: true, // 自动打开浏览器
     compress: true, // 将静态资源进行gzip压缩
-    headers: { // 为所有响应response添加 headers信息
-      'X-Access-Token': 'wlf'
+    headers: {
+      // 为所有响应response添加 headers信息
+      "X-Access-Token": "wlf",
     },
     // headers: [
     //   {
@@ -33,10 +34,11 @@ module.exports = {
     //     value: 'bar',
     //   },
     // ],
-    proxy: { // 开启代理
-      '/api': 'http://localhost:9000'
+    proxy: {
+      // 开启代理
+      "/api": "http://localhost:9000",
     },
-    host: '0.0.0.0', // 让你服务器可以被外部访问
+    host: "0.0.0.0", // 让你服务器可以被外部访问
     // https: true, // 将本地http服务变成https服务
     // historyApiFallback: true, // 提供页面来代替任何404响应
   },
